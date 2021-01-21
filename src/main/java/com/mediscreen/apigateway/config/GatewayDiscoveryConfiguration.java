@@ -21,11 +21,18 @@ public class GatewayDiscoveryConfiguration {
     @Value("${proxy.patient}")
     public String URI_MICROSERVICE_PATIENT_8081;
 
+    @Value("${proxy.notes}")
+    public String URI_MICROSERVICE_NOTES_8082;
+
     @Bean
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
         return builder.routes().route(r -> r.path("/api/patient/**").filters(
                 f -> f.filter(loggingFactory.apply(new Config(true, true))))
                 .uri(URI_MICROSERVICE_PATIENT_8081))
+                .route(r -> r.path("/api/note/**")
+                        .filters(f -> f.filter(
+                                loggingFactory.apply(new Config(true, true))))
+                        .uri(URI_MICROSERVICE_NOTES_8082))
 
                 .build();
     }
