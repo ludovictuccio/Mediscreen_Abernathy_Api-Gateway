@@ -1,0 +1,23 @@
+server:
+  port: 8080
+ 
+spring:
+  application:
+    name: api-gateway  
+  cloud:
+    gateway:     
+      routes:
+      - id: microservice-patient
+        uri: "${proxy.patient}"
+        predicates:
+        - Path=/api/patient/**
+        
+      - id: microservice-notes
+        uri: "${proxy.notes}"
+        predicates:
+        - Path=/api/note/**
+ 
+         
+logging:
+  level:
+     '[com.mediscreen.apigateway]': DEBUG

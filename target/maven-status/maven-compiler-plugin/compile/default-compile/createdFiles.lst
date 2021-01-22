@@ -1,0 +1,7 @@
+com\mediscreen\apigateway\config\GatewayDiscoveryConfiguration.class
+com\mediscreen\apigateway\filters\LoggingGatewayFilterFactory.class
+com\mediscreen\apigateway\filters\LoggingGlobalPreFilter.class
+com\mediscreen\apigateway\ApiGatewayApplication.class
+com\mediscreen\apigateway\filters\LoggingGlobalFiltersConfigurations.class
+com\mediscreen\apigateway\filters\LoggingGatewayFilterFactory$Config.class
+com\mediscreen\apigateway\filters\FirstPreLastPostGlobalFilter.class
