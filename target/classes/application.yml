@@ -16,6 +16,11 @@ spring:
         uri: "${proxy.notes}"
         predicates:
         - Path=/api/note/**
+        
+      - id: microservice-reports
+        uri: "${proxy.reports}"
+        predicates:
+        - Path=/api/reports/**
  
          
 logging:

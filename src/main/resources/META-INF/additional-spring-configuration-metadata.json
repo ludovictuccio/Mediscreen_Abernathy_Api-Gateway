@@ -8,5 +8,10 @@
     "name": "proxy.notes",
     "type": "java.lang.String",
     "description": "A description for 'proxy.notes'"
+  },
+  {
+    "name": "proxy.reports",
+    "type": "java.lang.String",
+    "description": "A description for 'proxy.reports'"
   }
 ]}
